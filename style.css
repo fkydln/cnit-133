@@ -43,3 +43,8 @@ footer {
 input {
   text-align: right;
 }
+
+.solidBorders{
+  border: 1px solid;
+
+}
