@@ -22,17 +22,15 @@
       <h1 id="home">CNIT 133 Homework 2 - Basic Operations</h1>
       <nav>
         <a href="./hw1.html">Home</a>
-        <a href="#part1">Part-1</a>
-        <a href="#part2">Part-2</a>
-        <a href="#part3x">Part-3 Extra Credit </a>
+        <a href="./hw2parts/part1.html">Part-1</a>
+        <a href="./hw2parts/part2.html">Part-2</a>
+        <a href="./hw2parts/part3.html">Part-3 Extra Credit </a>
 
         <a href="#footer">Bottom of the page</a>
       </nav>
     </header>
 
     <main>
-      <!-- Think about what the user will be required to type and do no allow the user to type anything that would offer a "weird" result such as NaN. -->
-
       <div id="hwButtons">
         <a href="./hw2.html"> Homework-2</a>
         <a href="./hw3.html"> Homework-3</a>
@@ -42,123 +40,6 @@
         <a href="./hw7.html"> Homework-7</a>
         <a href="./hw8.html"> Homework-8</a>
       </div>
-
-      <ul>
-        <li id="part1">Part 1 Description:</li>
-      </ul>
-      <p>Times New Roman, red color for ab</p>
-      <p>Arial, blue color for 12</p>
-      <p>Impact, green color, and emphasized for 89</p>
-      <div id="part1x"></div>
-      <ul>
-        <li id="part2">Part 2 Description:</li>
-      </ul>
-      <p>Form input-output with automatic calculations.</p>
-
-      <form name="part2form">
-        <table>
-          <tr>
-            <td>First Number:</td>
-            <td><input type="number" name="num1" /></td>
-          </tr>
-          <tr>
-            <td>Second Number:</td>
-            <td><input type="number" name="num2" /></td>
-          </tr>
-          <tr>
-            <td>Third Number:</td>
-            <td><input type="number" name="num3" /></td>
-          </tr>
-          <!-- <tr>
-            <td>Result:</td>
-            <td><input id="part2x" type="text" name="result" readonly /></td>
-          </tr> -->
-        </table>
-
-        <br />
-        <input
-          id="fadeInReset"
-          type="button"
-          onclick="process()"
-          value="SUBMIT"
-        />
-        <input type="reset" value="RESET" />
-        <button id="fadeOut" onclick="return getData()">Fade Results</button>
-      </form>
-      <div id="part2x"></div>
-      <ul>
-        <li id="part3">Part 3 Description: Extra Credit</li>
-      </ul>
-      <div id="flip">Click to Show/Hide Instructions</div>
-      <div id="panel">
-        <h2>The foreign exchange rates in June 2021</h2>
-        <h4>
-          Enter a dollar amount in the table below to see the corresponding
-          foreign exchange values
-        </h4>
-      </div>
-      <form>
-        <table style="border-collapse: collapse">
-          <caption style="display: none">
-            Monetary Exchange Rates
-          </caption>
-          <tbody>
-            <tr class="solidBorders">
-              <th class="solidBorders" colspan="3" scope="row">
-                Monetary Exchange Rates
-              </th>
-            </tr>
-            <tr>
-              <th class="solidBorders" scope="row">Currency</th>
-              <th class="solidBorders" scope="row">Rate</th>
-              <th class="solidBorders" scope="row">Value</th>
-            </tr>
-            <tr>
-              <td style="border: 1px dotted gray">Euro</td>
-              <td style="border: 1px dotted gray">0.84</td>
-              <td style="border: 1px dotted gray">
-                <input type="text" id="euro" disabled />
-              </td>
-            </tr>
-            <tr>
-              <td style="border: 1px dotted gray">Canadian Dollar</td>
-              <td style="border: 1px dotted gray">1.23</td>
-              <td style="border: 1px dotted gray">
-                <input type="text" id="canadian" disabled />
-              </td>
-            </tr>
-            <tr>
-              <td style="border: 1px dotted gray">Hong Kong Dollar</td>
-              <td style="border: 1px dotted gray">7.76</td>
-              <td style="border: 1px dotted gray">
-                <input type="text" id="hongkong" disabled />
-              </td>
-            </tr>
-            <tr>
-              <td style="border: 1px dotted gray">Japanese Yen</td>
-              <td style="border: 1px dotted gray">110.80</td>
-              <td style="border: 1px dotted gray">
-                <input type="text" id="japanese" disabled />
-              </td>
-            </tr>
-            <tr>
-              <td style="border: 1px dotted gray">Mexican Peso</td>
-              <td style="border: 1px dotted gray">19.82</td>
-              <td style="border: 1px dotted gray">
-                <input type="text" id="mexican" disabled />
-              </td>
-            </tr>
-            <tr>
-              <td style="border: 1px dotted gray" colspan="2">
-                <strong>Enter Amount of U.S. Dollars</strong>
-              </td>
-              <td style="border: 1px dotted gray">
-                <input type="number" id="usd" oninput="calculateExchange()" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </form>
     </main>
     <footer id="footer">
       <p>
