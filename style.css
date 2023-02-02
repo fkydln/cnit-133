@@ -1,0 +1,45 @@
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px black solid;
+}
+body {
+  background-color: rgb(253, 251, 244);
+}
+img {
+  display: flex;
+  max-width: 80%;
+  margin: auto;
+}
+#hwButtons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2%;
+}
+#hwButtons a {
+  background-color: rgb(92, 184, 174);
+  color: white;
+  border: 2px solid black;
+  padding: 1%;
+}
+footer {
+  display: flex;
+  margin-top: 3%;
+
+  justify-content: center;
+}
+input {
+  text-align: right;
+}
