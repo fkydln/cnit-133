@@ -80,6 +80,77 @@
         <button id="fadeOut" onclick="return getData()">Fade Results</button>
       </form>
       <div id="part2x"></div>
+      <ul>
+        <li id="part3">Part 3 Description: Extra Credit</li>
+      </ul>
+      <div id="flip">Click to Show/Hide Instructions</div>
+      <div id="panel">
+        <h2>The foreign exchange rates in June 2021</h2>
+        <h4>
+          Enter a dollar amount in the table below to see the corresponding
+          foreign exchange values
+        </h4>
+      </div>
+      <form>
+        <table border="1">
+          <caption style="display: none">
+            Monetary Exchange Rates
+          </caption>
+          <tbody>
+            <tr>
+              <th colspan="3" scope="row">Monetary Exchange Rates</th>
+            </tr>
+            <tr>
+              <th scope="row">Currency</th>
+              <th scope="row">Rate</th>
+              <th scope="row">Value</th>
+            </tr>
+            <tr>
+              <td style="border: 1px dotted gray">Euro</td>
+              <td style="border: 1px dotted gray">0.84</td>
+              <td style="border: 1px dotted gray">
+                <input type="text" id="euro" disabled />
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px dotted gray">Canadian Dollar</td>
+              <td style="border: 1px dotted gray">1.23</td>
+              <td style="border: 1px dotted gray">
+                <input type="text" id="canadian" disabled />
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px dotted gray">Hong Kong Dollar</td>
+              <td style="border: 1px dotted gray">7.76</td>
+              <td style="border: 1px dotted gray">
+                <input type="text" id="hongkong" disabled />
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px dotted gray">Japanese Yen</td>
+              <td style="border: 1px dotted gray">110.80</td>
+              <td style="border: 1px dotted gray">
+                <input type="text" id="japanese" disabled />
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px dotted gray">Mexican Peso</td>
+              <td style="border: 1px dotted gray">19.82</td>
+              <td style="border: 1px dotted gray">
+                <input type="text" id="mexican" disabled />
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px dotted gray" colspan="2">
+                <strong>Enter Amount of U.S. Dollars</strong>
+              </td>
+              <td style="border: 1px dotted gray">
+                <input type="number" id="usd" oninput="calculateExchange()" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
     </main>
     <footer id="footer">
       <p>
