@@ -136,3 +136,8 @@ function calculateExchange() {
   japanese.value = (usd * 110.8).toFixed(2);
   mexican.value = (usd * 19.82).toFixed(2);
 }
+
+// Change the (input tag) color when user clicks on the input.
+$("#usd").focus(function () {
+  $(this).css("background-color", "rgb(92, 184, 174)");
+});
