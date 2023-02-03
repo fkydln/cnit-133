@@ -12,7 +12,7 @@ function process() {
   n3 = parseInt(num3);
 
   sum = n1 + n2 + n3;
-  avg = sum / 3;
+  avg = (sum / 3).toFixed(2);
 
   //check to see if inputs left blank.
   if (num1 == "" || num2 == "" || num3 == "") {
