@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="./style.css" />
+    <script defer src="./hw3script.js"></script>
     <meta name="description" content="Homework-3 is shown in this website." />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,6 +15,11 @@
       <h1 id="home">CNIT 133 Homework 3 - Functions</h1>
       <nav>
         <a href="./hw1.html">Home</a>
+        <!-- Add parts' ids to the divs. ALSO CHECK LABELS on forms. -->
+        <a href="#part1">Part-1</a>
+        <a href="#part2">Part-2</a>
+        <a href="#part3">Part-3</a>
+        <a href="#part4">Part-4 (Extra Credit)</a>
         <a href="#footer">Bottom of the page</a>
       </nav>
     </header>
@@ -27,7 +33,18 @@
         <a href="./hw7.html"> Homework-7</a>
         <a href="./hw8.html"> Homework-8</a>
       </div>
-      <h2>Coming Soon!</h2>
+      <h2>Student Grades</h2>
+      <title>Grades Form</title>
+      <form>
+        Homework Average: <input type="number" id="hwAvg" /><br /><br />
+        Mid-Term Exam Score: <input type="number" id="midExam" /><br /><br />
+        Final Exam Score: <input type="number" id="finalExam" /><br /><br />
+        Participation: <input type="number" id="participation" /><br /><br />
+        <input type="button" value="Submit" onclick="calculateGrades()" />
+        <input type="button" value="Clear" onclick="clearForm()" />
+      </form>
+      <br /><br />
+      <textarea id="output" rows="5" cols="50"></textarea>
     </main>
     <footer id="footer">
       <p>
