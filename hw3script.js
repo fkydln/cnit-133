@@ -62,3 +62,11 @@ function clearForm() {
   document.getElementById("participation").value = "";
   document.getElementById("output").innerHTML = "";
 }
+// Part-2 scripts below
+
+function process() {
+  let name;
+
+  name = document.forms["part2form"].elements["name"].value;
+  console.log(name);
+}
