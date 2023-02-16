@@ -93,40 +93,55 @@ function process() {
   // Gather number of sales for item4
   item4 = document.forms["part2form"].elements["item4"].value;
   console.log("Original number of items entered for item4: " + item4);
-  // Multiply by the constant value
-  item1total = item1 * 20.99;
-  item2total = item2 * 12.75;
-  item3total = item3 * 9.95;
-  item4total = item4 * 35.89;
-  // Debugging after calculations
-  console.log(
-    "Final values following: " +
-      "\n" +
-      item1 +
-      "\n" +
-      item2 +
-      "\n" +
-      item3 +
-      "\n" +
-      item4
-  );
-  // Displays Quantity Sold:
-  $("#item1qty").val(item1);
-  $("#item2qty").val(item2);
-  $("#item3qty").val(item3);
-  $("#item4qty").val(item4);
-  // Displays totals by each item
-  $("#item1total").val(item1total);
-  $("#item2total").val(item2total);
-  $("#item3total").val(item3total);
-  $("#item4total").val(item4total);
-  // Displays items total
-  itemstotal = item1total + item2total + item3total + item4total;
-  $("#itemstotal").val(itemstotal);
-  // Salesman Income per week
-  commission = (item1total + item2total + item3total + item4total) * 0.09;
-  salesmanTotal = 250 + commission;
-  $("#totalWeekly").val(salesmanTotal);
+  if (item1 >= 0 && item2 >= 0 && item3 >= 0 && item4 >= 0) {
+    // Multiply by the constant value
+    item1total = item1 * 20.99;
+    item2total = item2 * 12.75;
+    item3total = item3 * 9.95;
+    item4total = item4 * 35.89;
+    // Debugging after calculations
+    console.log(
+      "Final values following: " +
+        "\n" +
+        item1 +
+        "\n" +
+        item2 +
+        "\n" +
+        item3 +
+        "\n" +
+        item4
+    );
+    // Displays Quantity Sold:
+    $("#item1qty").val(item1);
+    $("#item2qty").val(item2);
+    $("#item3qty").val(item3);
+    $("#item4qty").val(item4);
+    // Round the totals of each item to 2 decimal places
+    item1total = Number(item1total.toFixed(2));
+    item2total = Number(item2total.toFixed(2));
+    item3total = Number(item3total.toFixed(2));
+    item4total = Number(item4total.toFixed(2));
+    // Displays totals by each item
+    $("#item1total").val(item1total);
+    $("#item2total").val(item2total);
+    $("#item3total").val(item3total);
+    $("#item4total").val(item4total);
+    // Displays items total
+
+    itemstotal = Number(
+      item1total + item2total + item3total + item4total
+    ).toFixed(2);
+    $("#itemstotal").val(itemstotal);
+    // Salesman Income per week
+    commission = (item1total + item2total + item3total + item4total) * 0.09;
+
+    salesmanTotal = (250 + commission).toFixed(2);
+    $("#totalWeekly").val(salesmanTotal);
+  } else {
+    alert(
+      "You can only enter numbers that are greater than zero. Negative numbers are not allowed, please check your entry."
+    );
+  }
 }
 
 // Code below does not work.
