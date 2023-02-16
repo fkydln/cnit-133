@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css"
+    />
     <link rel="stylesheet" href="./style.css" />
     <script defer src="./hw3script.js"></script>
     <meta name="description" content="Homework-3 is shown in this website." />
@@ -48,10 +53,15 @@
 
       <div>
         <h3>Part-2</h3>
-        <form name="part2form">
+        <form name="part2form" id="part2form" onsubmit="return false">
           <table>
             <tr>
-              <td>Seller's Name:</td>
+              <td
+                id="sellerName"
+                title="Please make sure that the salesperson's name is spelled correctly"
+              >
+                Seller's Name:
+              </td>
               <td><input type="text" name="name" /></td>
             </tr>
             <tr>
@@ -93,26 +103,26 @@
             <tr>
               <td>1</td>
               <td>$20.99</td>
-              <td><input type="text" readonly /></td>
-              <td><input type="text" readonly /></td>
+              <td><input id="item1qty" type="text" readonly /></td>
+              <td><input id="item1total" type="text" readonly /></td>
             </tr>
             <tr>
               <td>2</td>
               <td>$12.75</td>
-              <td><input type="text" readonly /></td>
-              <td><input type="text" readonly /></td>
+              <td><input id="item2qty" type="text" readonly /></td>
+              <td><input id="item2total" type="text" readonly /></td>
             </tr>
             <tr>
               <td>3</td>
               <td>$9.95</td>
-              <td><input type="text" readonly /></td>
-              <td><input type="text" readonly /></td>
+              <td><input id="item3qty" type="text" readonly /></td>
+              <td><input id="item3total" type="text" readonly /></td>
             </tr>
             <tr>
               <td>4</td>
               <td>$35.89</td>
-              <td><input type="text" readonly /></td>
-              <td><input type="text" readonly /></td>
+              <td><input id="item4qty" type="text" readonly /></td>
+              <td><input id="item4total" type="text" readonly /></td>
             </tr>
           </div>
         </table>
@@ -121,13 +131,13 @@
             <td>Total Amount Sold</td>
             <td></td>
             <td></td>
-            <td><input type="text" readonly /></td>
+            <td><input type="text" id="itemstotal" readonly /></td>
           </tr>
           <tr>
             <td>Total Weekly Earnings</td>
             <td></td>
             <td></td>
-            <td><input type="text" readonly /></td>
+            <td><input id="totalWeekly" type="text" readonly /></td>
           </tr>
         </table>
       </div>

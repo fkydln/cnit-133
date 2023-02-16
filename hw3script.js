@@ -65,8 +65,76 @@ function clearForm() {
 // Part-2 scripts below
 
 function process() {
-  let name;
+  let name,
+    item1,
+    item2,
+    item3,
+    item4,
+    salesmanTotal,
+    commission,
+    item1total,
+    item2total,
+    item3total,
+    item4total,
+    itemstotal;
 
+  // Gather Seller's Name
   name = document.forms["part2form"].elements["name"].value;
   console.log(name);
+  // Gather number of sales for item1
+  item1 = document.forms["part2form"].elements["item1"].value;
+  console.log("Original number of items entered for item1: " + item1);
+  // Gather number of sales for item2
+  item2 = document.forms["part2form"].elements["item2"].value;
+  console.log("Original number of items entered for item2: " + item2);
+  // Gather number of sales for item3
+  item3 = document.forms["part2form"].elements["item3"].value;
+  console.log("Original number of items entered for item3: " + item3);
+  // Gather number of sales for item4
+  item4 = document.forms["part2form"].elements["item4"].value;
+  console.log("Original number of items entered for item4: " + item4);
+  // Multiply by the constant value
+  item1total = item1 * 20.99;
+  item2total = item2 * 12.75;
+  item3total = item3 * 9.95;
+  item4total = item4 * 35.89;
+  // Debugging after calculations
+  console.log(
+    "Final values following: " +
+      "\n" +
+      item1 +
+      "\n" +
+      item2 +
+      "\n" +
+      item3 +
+      "\n" +
+      item4
+  );
+  // Displays Quantity Sold:
+  $("#item1qty").val(item1);
+  $("#item2qty").val(item2);
+  $("#item3qty").val(item3);
+  $("#item4qty").val(item4);
+  // Displays totals by each item
+  $("#item1total").val(item1total);
+  $("#item2total").val(item2total);
+  $("#item3total").val(item3total);
+  $("#item4total").val(item4total);
+  // Displays items total
+  itemstotal = item1total + item2total + item3total + item4total;
+  $("#itemstotal").val(itemstotal);
+  // Salesman Income per week
+  commission = (item1total + item2total + item3total + item4total) * 0.09;
+  salesmanTotal = 250 + commission;
+  $("#totalWeekly").val(salesmanTotal);
 }
+
+// Code below does not work.
+// jQuery Tooltip:
+// $(function () {
+//   $("#sellerName").tooltip();
+// });
+
+// $(document).ready(function () {
+//   $("#sellerName").tooltip();
+// });
