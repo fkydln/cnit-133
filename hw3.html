@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <link
       rel="stylesheet"
-      href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
     />
     <link rel="stylesheet" href="./style.css" />
     <script defer src="./hw3script.js"></script>
@@ -54,34 +55,41 @@
       <h3>Part-2</h3>
       <form name="part2form" id="part2form" onsubmit="return false">
         <table>
-          <tr>
-            <td
-              id="sellerName"
-              title="Please make sure that the salesperson's name is spelled correctly"
-            >
-              Seller's Name:
+          <tr
+            title="Please make sure that the salesperson's name is spelled correctly"
+          >
+            <td id="sellerName">
+              <label for="labelSellerID">Seller's Name:</label>
             </td>
-            <td><input type="text" name="name" /></td>
+            <td><input type="text" name="name" id="labelSellerID" /></td>
           </tr>
           <tr>
             <td></td>
             <td>For each item type the quantity sold by the seller</td>
           </tr>
           <tr>
-            <td>Item 1:</td>
-            <td><input type="number" min="0" name="item1" /></td>
+            <td><label for="item1label">Item 1:</label></td>
+            <td>
+              <input type="number" min="0" name="item1" id="item1label" />
+            </td>
           </tr>
           <tr>
-            <td>Item 2:</td>
-            <td><input type="number" min="0" name="item2" /></td>
+            <td><label for="item2label">Item 2:</label></td>
+            <td>
+              <input type="number" min="0" name="item2" id="item2label" />
+            </td>
           </tr>
           <tr>
-            <td>Item 3:</td>
-            <td><input type="number" min="0" name="item3" /></td>
+            <td><label for="item3label">Item 3:</label></td>
+            <td>
+              <input type="number" min="0" name="item3" id="item3label" />
+            </td>
           </tr>
           <tr>
-            <td>Item 4:</td>
-            <td><input type="number" min="0" name="item4" /></td>
+            <td><label for="item4label">Item 4:</label></td>
+            <td>
+              <input type="number" min="0" name="item4" id="item4label" />
+            </td>
           </tr>
           <tr>
             <td>

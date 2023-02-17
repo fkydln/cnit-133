@@ -144,12 +144,7 @@ function process() {
   }
 }
 
-// Code below does not work.
-// jQuery Tooltip:
-// $(function () {
-//   $("#sellerName").tooltip();
-// });
-
-// $(document).ready(function () {
-//   $("#sellerName").tooltip();
-// });
+// Tooltip:
+$(function () {
+  $(document).tooltip();
+});
