@@ -51,96 +51,91 @@
       <br /><br />
       <textarea id="output" rows="5" cols="50"></textarea>
 
-      <div>
-        <h3>Part-2</h3>
-        <form name="part2form" id="part2form" onsubmit="return false">
-          <table>
-            <tr>
-              <td
-                id="sellerName"
-                title="Please make sure that the salesperson's name is spelled correctly"
-              >
-                Seller's Name:
-              </td>
-              <td><input type="text" name="name" /></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>For each item type the quantity sold by the seller</td>
-            </tr>
-            <tr>
-              <td>Item 1:</td>
-              <td><input type="number" min="0" name="item1" /></td>
-            </tr>
-            <tr>
-              <td>Item 2:</td>
-              <td><input type="number" min="0" name="item2" /></td>
-            </tr>
-            <tr>
-              <td>Item 3:</td>
-              <td><input type="number" min="0" name="item3" /></td>
-            </tr>
-            <tr>
-              <td>Item 4:</td>
-              <td><input type="number" min="0" name="item4" /></td>
-            </tr>
-            <tr>
-              <td>
-                <input type="submit" value="Submit" onclick="process()" />
-              </td>
-              <td><input type="reset" value="Clear Form" /></td>
-            </tr>
-          </table>
-        </form>
+      <h3>Part-2</h3>
+      <form name="part2form" id="part2form" onsubmit="return false">
         <table>
           <tr>
-            <th>Item#</th>
-            <th>Price</th>
-            <th>Qty Sold</th>
-            <th>Total</th>
-          </tr>
-          <div>
-            <tr>
-              <td>1</td>
-              <td>$20.99</td>
-              <td><input id="item1qty" type="text" readonly /></td>
-              <td><input id="item1total" type="text" readonly /></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>$12.75</td>
-              <td><input id="item2qty" type="text" readonly /></td>
-              <td><input id="item2total" type="text" readonly /></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>$9.95</td>
-              <td><input id="item3qty" type="text" readonly /></td>
-              <td><input id="item3total" type="text" readonly /></td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>$35.89</td>
-              <td><input id="item4qty" type="text" readonly /></td>
-              <td><input id="item4total" type="text" readonly /></td>
-            </tr>
-          </div>
-        </table>
-        <table>
-          <tr>
-            <td>Total Amount Sold</td>
-            <td></td>
-            <td></td>
-            <td><input type="text" id="itemstotal" readonly /></td>
+            <td
+              id="sellerName"
+              title="Please make sure that the salesperson's name is spelled correctly"
+            >
+              Seller's Name:
+            </td>
+            <td><input type="text" name="name" /></td>
           </tr>
           <tr>
-            <td>Total Weekly Earnings</td>
             <td></td>
-            <td></td>
-            <td><input id="totalWeekly" type="text" readonly /></td>
+            <td>For each item type the quantity sold by the seller</td>
+          </tr>
+          <tr>
+            <td>Item 1:</td>
+            <td><input type="number" min="0" name="item1" /></td>
+          </tr>
+          <tr>
+            <td>Item 2:</td>
+            <td><input type="number" min="0" name="item2" /></td>
+          </tr>
+          <tr>
+            <td>Item 3:</td>
+            <td><input type="number" min="0" name="item3" /></td>
+          </tr>
+          <tr>
+            <td>Item 4:</td>
+            <td><input type="number" min="0" name="item4" /></td>
+          </tr>
+          <tr>
+            <td>
+              <input type="submit" value="Submit" onclick="process()" />
+            </td>
+            <td><input type="reset" value="Clear Form" /></td>
           </tr>
         </table>
-      </div>
+      </form>
+      <table>
+        <tr>
+          <th>Item#</th>
+          <th>Price</th>
+          <th>Qty Sold</th>
+          <th>Total</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>$20.99</td>
+          <td><input id="item1qty" type="text" readonly /></td>
+          <td><input id="item1total" type="text" readonly /></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>$12.75</td>
+          <td><input id="item2qty" type="text" readonly /></td>
+          <td><input id="item2total" type="text" readonly /></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>$9.95</td>
+          <td><input id="item3qty" type="text" readonly /></td>
+          <td><input id="item3total" type="text" readonly /></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>$35.89</td>
+          <td><input id="item4qty" type="text" readonly /></td>
+          <td><input id="item4total" type="text" readonly /></td>
+        </tr>
+      </table>
+      <table style="width: 100%">
+        <th style="width: 240px"></th>
+        <tr>
+          <td>Total Amount Sold</td>
+          <td><input type="text" id="itemstotal" readonly /></td>
+        </tr>
+        <tr>
+          <td>Total Weekly Earnings</td>
+          <td>
+            <input id="totalWeekly" type="text" readonly />
+          </td>
+        </tr>
+      </table>
     </main>
     <footer id="footer">
       <p>
