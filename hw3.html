@@ -155,15 +155,64 @@
           </tr>
           <tr>
             <td><label for="degreeOutput">Result: </label></td>
-            <td><textarea id="degreeOutput" readonly rows="2" cols="20"></textarea></td>
-            
+            <td>
+              <textarea
+                id="degreeOutput"
+                readonly
+                rows="2"
+                cols="20"
+              ></textarea>
+            </td>
           </tr>
           <tr>
             <td>
-              <input type="submit" value="Convert C to F" onclick="convertCtoF()" />
-              <input type="submit" value="Convert F to C" onclick="convertFtoC()" />
-              <td><input type="reset" value="Clear Form" /></td>
-            
+              <input
+                type="submit"
+                value="Convert C to F"
+                onclick="convertCtoF()"
+              />
+              <input
+                type="submit"
+                value="Convert F to C"
+                onclick="convertFtoC()"
+              />
+            </td>
+
+            <td><input type="reset" value="Clear Form" /></td>
+          </tr>
+        </table>
+      </form>
+      <h3>Part-4 (Extra Credit)</h3>
+      <form name="part4form" onsubmit="return false">
+        <table>
+          <tr>
+            <td><label for="question">The Question</label></td>
+            <td><input type="text" id="question" readonly /></td>
+          </tr>
+          <tr>
+            <td><label for="status">Status</label></td>
+            <td>
+              <input type="text" id="status" readonly />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="userAnswer">Answer</label></td>
+            <td><input required type="text" id="userAnswer" /></td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="button"
+                value="Generate Question"
+                onclick="generateQuestion()"
+              />
+            </td>
+            <td>
+              <input
+                type="submit"
+                value="Check Answer"
+                onclick="userAnswerCheck()"
+              />
             </td>
           </tr>
         </table>

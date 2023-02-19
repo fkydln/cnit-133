@@ -193,3 +193,45 @@ function convertFtoC() {
   // Display result
   $("#degreeOutput").val(input + "°F is" + convertedToC + "°C");
 }
+// Part-4 Extra Credits scripts below
+var answer;
+function generateQuestion() {
+  let num1, num2, question;
+  // Generate the question
+  num1 = Math.floor(Math.random() * 10);
+  num2 = Math.floor(Math.random() * 10);
+  question = "How much " + num1 + " times " + num2 + "?";
+  // Assign answer
+  answer = num1 * num2;
+  // Display the question
+  $("#question").val(question);
+  // Clear user input
+  document["part4form"].elements["userAnswer"].value = "";
+  // Status update
+  document["part4form"].elements["status"].value = "Type your answer";
+}
+
+function userAnswerCheck() {
+  let input;
+  // Gather the Input
+  input = document["part4form"].elements["userAnswer"].value;
+  if (input == answer) {
+    console.log("Very Good!");
+    document["part4form"].elements["status"].value = "Very Good!";
+  } else {
+    console.log("Sorry, try again.");
+    document["part4form"].elements["status"].value = "Sorry, try again.";
+  }
+}
+
+// Studied below
+// function dataCalculation(call) {
+//   let calculated = "calculated Data";
+//   call(calculated);
+// }
+
+// function dataPrint(calculated) {
+//   console.log(calculated);
+// }
+
+// dataCalculation(dataPrint);
