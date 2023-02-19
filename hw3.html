@@ -144,6 +144,29 @@
           </td>
         </tr>
       </table>
+      <h3>Part-3</h3>
+      <form name="part3form" onsubmit="return false">
+        <table>
+          <tr>
+            <td>
+              <label for="degreeInput">Enter the degree:</label>
+            </td>
+            <td><input id="degreeInput" type="number" /></td>
+          </tr>
+          <tr>
+            <td><label for="degreeOutput">Result: </label></td>
+            <td><input id="degreeOutput" readonly type="text" /></td>
+          </tr>
+          <tr>
+            <td>
+              <input type="submit" value="Convert C to F" onclick="convertCtoF()" />
+              <input type="submit" value="Convert F to C" onclick="convertFtoC()" />
+              <td><input type="reset" value="Clear Form" /></td>
+            
+            </td>
+          </tr>
+        </table>
+      </form>
     </main>
     <footer id="footer">
       <p>

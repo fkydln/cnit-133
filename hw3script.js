@@ -148,3 +148,29 @@ function process() {
 $(function () {
   $(document).tooltip();
 });
+
+// Part-3 scripts below
+function convertCtoF() {
+  let input, convertedToF;
+  // Gather input
+  input = document.forms["part3form"].elements["degreeInput"].value;
+  // Debugging
+  console.log("entered: " + input);
+  // Formula
+  convertedToF = (9 / 5) * input + 32;
+  // Display result
+  $("#degreeOutput").val(convertedToF);
+
+  return convertedToF;
+}
+function convertFtoC() {
+  let input, convertedToC;
+  // Gather input
+  input = document.forms["part3form"].elements["degreeInput"].value;
+  // Debugging
+  console.log("entered: " + input);
+  // Formula
+  convertedToC = (5 / 9) * (input - 32);
+  // Display result
+  $("#degreeOutput").val(convertedToC);
+}
