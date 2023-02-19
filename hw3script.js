@@ -152,25 +152,44 @@ $(function () {
 // Part-3 scripts below
 function convertCtoF() {
   let input, convertedToF;
+
   // Gather input
   input = document.forms["part3form"].elements["degreeInput"].value;
+  // Input validator
+  if (isNaN(input)) {
+    console.error("Invalid input: value must be a number");
+    $("#degreeOutput").val(input + " is not valid. Please only enter numbers.");
+    return;
+  } else {
+    console.log("It's a valid input");
+  }
   // Debugging
   console.log("entered: " + input);
   // Formula
   convertedToF = (9 / 5) * input + 32;
+  // Round
+  convertedToF = Math.round(convertedToF);
   // Display result
-  $("#degreeOutput").val(convertedToF);
-
-  return convertedToF;
+  $("#degreeOutput").val(input + "°C is " + convertedToF + "°F");
 }
 function convertFtoC() {
   let input, convertedToC;
   // Gather input
   input = document.forms["part3form"].elements["degreeInput"].value;
+  // Input validator
+  if (isNaN(input)) {
+    console.error("Invalid input: value must be a number");
+    $("#degreeOutput").val(input + " is not valid. Please only enter numbers.");
+    return;
+  } else {
+    console.log("It's a valid input");
+  }
   // Debugging
   console.log("entered: " + input);
   // Formula
   convertedToC = (5 / 9) * (input - 32);
+  // Round
+  convertedToC = Math.round(convertedToC);
   // Display result
-  $("#degreeOutput").val(convertedToC);
+  $("#degreeOutput").val(input + "°F is" + convertedToC + "°C");
 }
