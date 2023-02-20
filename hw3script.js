@@ -218,10 +218,18 @@ function userAnswerCheck() {
   if (input == answer) {
     console.log("Very Good!");
     document["part4form"].elements["status"].value = "Very Good!";
+    $(".modal").show();
   } else {
     console.log("Sorry, try again.");
     document["part4form"].elements["status"].value = "Sorry, try again.";
   }
+}
+function thanksMessage() {
+  // Status update
+  document["part4form"].elements["status"].value = "Thanks for playing!";
+  // Reset question & input
+  document["part4form"].elements["question"].value = "";
+  document["part4form"].elements["userAnswer"].value = "";
 }
 
 // Studied below
@@ -235,3 +243,21 @@ function userAnswerCheck() {
 // }
 
 // dataCalculation(dataPrint);
+
+$(document).ready(function () {
+  $(".btn-open-modal").click(function () {
+    $(".modal").show(); // show the modal when the button is clicked
+  });
+
+  $(".btn-yes").click(function () {
+    // handle the "Yes" button click
+    // ...
+    $(".modal").hide(); // hide the modal after handling the click
+  });
+
+  $(".btn-no").click(function () {
+    // handle the "No" button click
+    // ...
+    $(".modal").hide(); // hide the modal after handling the click
+  });
+});
