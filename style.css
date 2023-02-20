@@ -17,6 +17,8 @@ nav {
 }
 body {
   background-color: rgb(253, 251, 244);
+  max-width: 95%;
+  margin: auto;
 }
 img {
   display: flex;
