@@ -156,7 +156,18 @@ function convertCtoF() {
   // Gather input
   input = document.forms["part3form"].elements["degreeInput"].value;
   // Input validator
-  if (isNaN(input)) {
+
+  if (input < -273) {
+    console.log("Entered smaller than -273°C");
+    $("#degreeOutput").val(
+      "Absolute zero limit reached. Must enter -273°C or higher. "
+    );
+    return;
+  } else if (input == "") {
+    console.log("Nothing entered");
+    $("#degreeOutput").val("Please only enter numbers.");
+    return;
+  } else if (isNaN(input)) {
     console.error("Invalid input: value must be a number");
     $("#degreeOutput").val(input + " is not valid. Please only enter numbers.");
     return;
@@ -177,7 +188,17 @@ function convertFtoC() {
   // Gather input
   input = document.forms["part3form"].elements["degreeInput"].value;
   // Input validator
-  if (isNaN(input)) {
+  if (input < -459) {
+    console.log("Entered smaller than -459°F");
+    $("#degreeOutput").val(
+      "Absolute zero limit reached. Must enter -459°F or higher. "
+    );
+    return;
+  } else if (input == "") {
+    console.log("Nothing entered");
+    $("#degreeOutput").val("Please only enter numbers.");
+    return;
+  } else if (isNaN(input)) {
     console.error("Invalid input: value must be a number");
     $("#degreeOutput").val(input + " is not valid. Please only enter numbers.");
     return;
@@ -193,6 +214,7 @@ function convertFtoC() {
   // Display result
   $("#degreeOutput").val(input + "°F is" + convertedToC + "°C");
 }
+
 // Part-4 Extra Credits scripts below
 var answer;
 function generateQuestion() {
