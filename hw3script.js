@@ -215,13 +215,24 @@ function userAnswerCheck() {
   let input;
   // Gather the Input
   input = document["part4form"].elements["userAnswer"].value;
-  if (input == answer) {
+
+  if (input == "") {
+    document["part4form"].elements["status"].value = "Must enter a value.";
+  } else if (input == answer) {
     console.log("Very Good!");
     document["part4form"].elements["status"].value = "Very Good!";
+    $(document["part4form"].elements["status"]).css(
+      "background-color",
+      "rgb(15, 250, 15)"
+    );
     $(".modal").show();
   } else {
     console.log("Sorry, try again.");
     document["part4form"].elements["status"].value = "Sorry, try again.";
+    $(document["part4form"].elements["status"]).css(
+      "background-color",
+      "rgb(255, 110, 110)"
+    );
   }
 }
 function thanksMessage() {
@@ -231,18 +242,6 @@ function thanksMessage() {
   document["part4form"].elements["question"].value = "";
   document["part4form"].elements["userAnswer"].value = "";
 }
-
-// Studied below
-// function dataCalculation(call) {
-//   let calculated = "calculated Data";
-//   call(calculated);
-// }
-
-// function dataPrint(calculated) {
-//   console.log(calculated);
-// }
-
-// dataCalculation(dataPrint);
 
 $(document).ready(function () {
   $(".btn-open-modal").click(function () {
@@ -261,3 +260,7 @@ $(document).ready(function () {
     $(".modal").hide(); // hide the modal after handling the click
   });
 });
+
+function resetStatusColor() {
+  $(document["part4form"].elements["status"]).css("background-color", "white");
+}
