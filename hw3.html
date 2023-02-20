@@ -42,10 +42,25 @@
       <h2 id="part1">Student Grades</h2>
 
       <form>
-        Homework Average: <input type="number" id="hwAvg" /><br /><br />
-        Mid-Term Exam Score: <input type="number" id="midExam" /><br /><br />
-        Final Exam Score: <input type="number" id="finalExam" /><br /><br />
-        Participation: <input type="number" id="participation" /><br /><br />
+        <table>
+          <tr>
+            <td><label for="hwAvg">Homework Average:</label></td>
+            <td><input type="number" id="hwAvg" /></td>
+          </tr>
+          <tr>
+            <td><label for="midExam">Mid-Term Exam Score: </label></td>
+            <td><input type="number" id="midExam" /></td>
+          </tr>
+          <tr>
+            <td><label for="finalExam">Final Exam Score: </label></td>
+            <td><input type="number" id="finalExam" /></td>
+          </tr>
+          <tr>
+            <td><label for="participation">Participation: </label></td>
+            <td><input type="number" id="participation" /></td>
+          </tr>
+        </table>
+
         <input type="button" value="Submit" onclick="calculateGrades()" />
         <input type="button" value="Clear" onclick="clearForm()" />
       </form>
