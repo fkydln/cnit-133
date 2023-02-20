@@ -1,3 +1,4 @@
+// Part-1 Scripts
 function calculateGrades() {
   var hwAvg = parseInt(document.getElementById("hwAvg").value);
   var midExam = parseInt(document.getElementById("midExam").value);
@@ -93,7 +94,18 @@ function process() {
   // Gather number of sales for item4
   item4 = document.forms["part2form"].elements["item4"].value;
   console.log("Original number of items entered for item4: " + item4);
-  if (item1 >= 0 && item2 >= 0 && item3 >= 0 && item4 >= 0) {
+
+  if (item1 == "" || item2 == "" || item3 == "" || item4 == "" || name == "") {
+    // Sorry, no alerts allowed in this homework. Commenting.
+    // alert("You must fill Seller's name and all items.");
+    $(".field-status").text("Required");
+    $(".requiredRed").css("background-color", "#F75D59");
+    setTimeout(function () {
+      $(".field-status").text("");
+      $(".requiredRed").css("background-color", "white");
+    }, 2000);
+    return;
+  } else if (item1 >= 0 && item2 >= 0 && item3 >= 0 && item4 >= 0) {
     // Multiply by the constant value
     item1total = item1 * 20.99;
     item2total = item2 * 12.75;
