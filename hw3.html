@@ -154,7 +154,9 @@
             <td>
               <input type="submit" value="Submit" onclick="process()" />
             </td>
-            <td><input type="reset" value="Clear Form" /></td>
+            <td>
+              <input type="reset" value="Clear Form" onclick="resetEntry()" />
+            </td>
             <td></td>
           </tr>
         </table>
@@ -169,26 +171,26 @@
         <tr>
           <td>1</td>
           <td>$20.99</td>
-          <td><input id="item1qty" type="text" readonly /></td>
-          <td><input id="item1total" type="text" readonly /></td>
+          <td><input id="item1qty" type="text" class="entry" readonly /></td>
+          <td><input id="item1total" type="text" class="entry" readonly /></td>
         </tr>
         <tr>
           <td>2</td>
           <td>$12.75</td>
-          <td><input id="item2qty" type="text" readonly /></td>
-          <td><input id="item2total" type="text" readonly /></td>
+          <td><input id="item2qty" type="text" class="entry" readonly /></td>
+          <td><input id="item2total" type="text" class="entry" readonly /></td>
         </tr>
         <tr>
           <td>3</td>
           <td>$9.95</td>
-          <td><input id="item3qty" type="text" readonly /></td>
-          <td><input id="item3total" type="text" readonly /></td>
+          <td><input id="item3qty" type="text" class="entry" readonly /></td>
+          <td><input id="item3total" type="text" class="entry" readonly /></td>
         </tr>
         <tr>
           <td>4</td>
           <td>$35.89</td>
-          <td><input id="item4qty" type="text" readonly /></td>
-          <td><input id="item4total" type="text" readonly /></td>
+          <td><input id="item4qty" type="text" class="entry" readonly /></td>
+          <td><input id="item4total" type="text" class="entry" readonly /></td>
         </tr>
       </table>
       <table style="width: 100%">
@@ -198,12 +200,12 @@
         </tr>
         <tr>
           <td>Total Amount Sold</td>
-          <td><input type="text" id="itemstotal" readonly /></td>
+          <td><input type="text" id="itemstotal" readonly class="entry" /></td>
         </tr>
         <tr>
           <td>Total Weekly Earnings</td>
           <td>
-            <input id="totalWeekly" type="text" readonly />
+            <input id="totalWeekly" type="text" readonly class="entry" />
           </td>
         </tr>
       </table>

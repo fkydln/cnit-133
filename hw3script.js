@@ -160,6 +160,9 @@ function process() {
 $(function () {
   $(document).tooltip();
 });
+function resetEntry() {
+  $(".entry").val("");
+}
 
 // Part-3 scripts below
 function convertCtoF() {
@@ -224,7 +227,7 @@ function convertFtoC() {
   // Round
   convertedToC = Math.round(convertedToC);
   // Display result
-  $("#degreeOutput").val(input + "°F is" + convertedToC + "°C");
+  $("#degreeOutput").val(input + "°F is " + convertedToC + "°C");
 }
 
 // Part-4 Extra Credits scripts below
