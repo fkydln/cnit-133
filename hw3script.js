@@ -144,7 +144,7 @@ function process() {
       item1total + item2total + item3total + item4total
     ).toFixed(2);
     $("#itemstotal").val(itemstotal);
-    // Salesman Income per week
+    // Salesman Income per week.
     commission = (item1total + item2total + item3total + item4total) * 0.09;
 
     salesmanTotal = (250 + commission).toFixed(2);
