@@ -80,3 +80,11 @@ input {
 .btn-yes, .btn-no {
   margin-left: 10px;
 }
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+table {
+  border-collapse: collapse;
+}
