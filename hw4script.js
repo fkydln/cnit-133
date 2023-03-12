@@ -95,6 +95,33 @@ for (let i = 0; i < interestRates.length; i++) {
 
   table.appendChild(tableBody);
 
-  document.body.appendChild(table);
+  //   document.body.appendChild(table);
+  document.getElementById("compoundInt").appendChild(table);
 }
 // Part-3 Extra Credit Scripts
+
+function gatherSize() {
+  let desiredSize;
+
+  desiredSize = $("#inputSq").val();
+
+  if (desiredSize >= 2 && desiredSize <= 10) {
+    generateSquare(desiredSize);
+  } else {
+    // Generate error message
+    // Idea: Red input box
+  }
+}
+
+function generateSquare(size) {
+  for (let i = 0; i < size; i++) {
+    $("#asterisksDrawn").append("<br>");
+    if (i != 0 && i != size - 1) {
+      $("#asterisksDrawn").append(" + ");
+    }
+    for (let j = 0; j < size; j++) {
+      console.log("times");
+      $("#asterisksDrawn").append(" * ");
+    }
+  }
+}
