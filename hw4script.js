@@ -99,29 +99,27 @@ for (let i = 0; i < interestRates.length; i++) {
   document.getElementById("compoundInt").appendChild(table);
 }
 // Part-3 Extra Credit Scripts
-
-function gatherSize() {
-  let desiredSize;
-
-  desiredSize = $("#inputSq").val();
-
-  if (desiredSize >= 2 && desiredSize <= 10) {
-    generateSquare(desiredSize);
-  } else {
-    // Generate error message
-    // Idea: Red input box
+function displaySquare() {
+  const numberInput = document.getElementById("number-input");
+  const result = document.getElementById("result");
+  const size = parseInt(numberInput.value);
+  if (isNaN(size) || size < 2 || size > 10) {
+    result.innerText =
+      "Invalid number. Please enter a number between 2 and 10.";
+    return;
   }
-}
-
-function generateSquare(size) {
-  for (let i = 0; i < size; i++) {
-    $("#asterisksDrawn").append("<br>");
-    if (i != 0 && i != size - 1) {
-      $("#asterisksDrawn").append(" + ");
+  let square = "";
+  for (let i = 1; i <= size; i++) {
+    for (let j = 1; j <= size; j++) {
+      if (i === 1 || i === size || j === 1 || j === size) {
+        square += "* &nbsp; &nbsp; ";
+      } else {
+        square += "&nbsp; &nbsp; &nbsp;&nbsp; ";
+      }
     }
-    for (let j = 0; j < size; j++) {
-      console.log("times");
-      $("#asterisksDrawn").append(" * ");
+    if (i !== size) {
+      square += "<br>";
     }
   }
+  result.innerHTML = square;
 }

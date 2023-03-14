@@ -49,18 +49,26 @@
             <th>Asterisks Square</th>
           </tr>
           <tr>
-            <td><label for="inputSq">Enter an integer</label></td>
-            <td><input id="inputSq" type="number" /></td>
+            <td><label for="number-input">Enter an integer</label></td>
+            <td>
+              <input
+                type="number"
+                id="number-input"
+                name="number-input"
+                min="2"
+                max="10"
+              />
+            </td>
           </tr>
           <tr>
             <td>
-              <input type="button" value="Submit" onclick="gatherSize()" />
+              <input type="button" value="Submit" onclick="displaySquare()" />
             </td>
             <td><input type="button" value="Clear" onclick="clearForm()" /></td>
           </tr>
         </table>
       </form>
-      <section id="asterisksDrawn"></section>
+      <div id="result"></div>
     </main>
     <footer id="footer">
       <p>
