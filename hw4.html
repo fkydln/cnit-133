@@ -8,16 +8,21 @@
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
 
     <script defer src="./hw4script.js"></script>
-    <link rel="stylesheet" href="./style.css" />
-    <meta name="description" content="Homework-4 is shown in this website." />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- prettier-ignore -->
+    <link rel="stylesheet" href="./style.css" >
+    <!-- prettier-ignore -->
+    <meta name="description" content="Homework-4 is shown in this website." >
+    <!-- prettier-ignore -->
+    <meta charset="UTF-8" >
+    <!-- prettier-ignore -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>JavaScript, jQuery, AJAX Homework-4</title>
     <!-- I am Faz Kayadelen, passionate about web development! -->
   </head>
   <body>
     <header>
-      <img src="./logo.PNG" alt="Faz's world representative img" />
+      <!-- prettier-ignore -->
+      <img src="./logo.PNG" alt="Faz's world representative img" >
       <h1 id="home">CNIT 133 Homework 4 - Looping Statements</h1>
       <nav>
         <a href="./hw1.html">Home</a>
@@ -50,7 +55,7 @@
       <h2 id="part2">Part-2</h2>
       <h3>Learn about compound interest</h3>
       <p>In this section, my code shows three tables for compound interest.</p>
-      <section id="compoundInt"></section>
+      <div id="compoundInt"></div>
       <h2 id="part3">Part-3 Extra Credit</h2>
       <p>
         This is a hollow-square generator, please enter any number between 2 and
@@ -61,24 +66,28 @@
         <table>
           <tr>
             <th>Asterisks Square</th>
+            <th></th>
           </tr>
           <tr>
             <td><label for="number-input">Enter an integer</label></td>
             <td>
+              <!-- prettier-ignore -->
               <input
                 type="number"
                 id="number-input"
                 name="number-input"
                 min="2"
                 max="10"
-              />
+              >
             </td>
           </tr>
           <tr>
             <td>
-              <input type="button" value="Submit" onclick="displaySquare()" />
+              <!-- prettier-ignore -->
+              <input type="button" value="Submit" onclick="displaySquare()" >
             </td>
-            <td><input type="reset" /></td>
+            <!-- prettier-ignore -->
+            <td><input type="reset" onclick="clearOutput()"></td>
           </tr>
         </table>
       </form>

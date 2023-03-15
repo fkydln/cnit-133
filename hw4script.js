@@ -123,3 +123,6 @@ function displaySquare() {
   }
   result.innerHTML = square;
 }
+function clearOutput() {
+  $("#result").html("");
+}
