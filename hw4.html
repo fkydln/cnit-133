@@ -21,6 +21,9 @@
       <h1 id="home">CNIT 133 Homework 4 - Looping Statements</h1>
       <nav>
         <a href="./hw1.html">Home</a>
+        <a href="#part1">Part-1</a>
+        <a href="#part2">Part-2</a>
+        <a href="#part3">Part-3 (Extra Credit)</a>
         <a href="#footer">Bottom of the page</a>
       </nav>
     </header>
@@ -34,14 +37,25 @@
         <a href="./hw7.html"> Homework-7</a>
         <a href="./hw8.html"> Homework-8</a>
       </div>
-      <h2>Part-1</h2>
+      <h2 id="part1">Part-1</h2>
+      <p>
+        This homework part shows the function that is using the for looping
+        statement, that calculates the product and sum of every fourth integer
+        from 5 to 25 inclusive and then displays the results, along with some
+        accompanying text. It also shows a draggable HTML element!
+      </p>
       <div id="part1result" class="draggable"></div>
       <div id="part1while" class="draggable"></div>
       <div class="draggable">Drag me!</div>
-      <h2>Part-2</h2>
+      <h2 id="part2">Part-2</h2>
       <h3>Learn about compound interest</h3>
+      <p>In this section, my code shows three tables for compound interest.</p>
       <section id="compoundInt"></section>
-      <h2>Part-3 Extra Credit</h2>
+      <h2 id="part3">Part-3 Extra Credit</h2>
+      <p>
+        This is a hollow-square generator, please enter any number between 2 and
+        10 inclusively.
+      </p>
 
       <form onsubmit="return false">
         <table>
@@ -64,7 +78,7 @@
             <td>
               <input type="button" value="Submit" onclick="displaySquare()" />
             </td>
-            <td><input type="button" value="Clear" onclick="clearForm()" /></td>
+            <td><input type="reset" /></td>
           </tr>
         </table>
       </form>
