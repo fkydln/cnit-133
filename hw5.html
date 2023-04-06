@@ -21,6 +21,7 @@
       <h1 id="home">CNIT 133 Homework 5 - Arrays</h1>
       <nav>
         <a href="./hw1.html">Home</a>
+        <a href="#part1">Part-1</a>
         <a href="#footer">Bottom of the page</a>
       </nav>
     </header>
@@ -34,8 +35,11 @@
         <a href="./hw7.html"> Homework-7</a>
         <a href="./hw8.html"> Homework-8</a>
       </div>
-      <h2>Part - 1</h2>
-      <p>In this part of the homework,</p>
+      <h2 id="part1">Part - 1</h2>
+      <p>
+        In this part of the homework, the form below takes users' personal
+        information and preferences and submits the data.
+      </p>
       <form onsubmit="return false">
         <table>
           <tr>
@@ -52,12 +56,18 @@
                 21</label
               >
             </td>
+          </tr>
+          <tr>
+            <td></td>
             <td>
               <label
                 ><input type="radio" name="ageGroup" value="between" />Between
                 21 and 50</label
               >
             </td>
+          </tr>
+          <tr>
+            <td></td>
             <td>
               <label
                 ><input type="radio" name="ageGroup" value="more" />Older than
@@ -72,44 +82,54 @@
                 ><input
                   type="checkbox"
                   name="pt1browsers"
-                  value="firefox"
+                  value="Firefox"
                 />Firefox</label
               >
             </td>
+          </tr>
+          <tr>
+            <td></td>
             <td>
               <label
                 ><input
                   type="checkbox"
                   name="pt1browsers"
-                  value="firefox"
+                  value="Edge"
                 />Edge</label
               >
             </td>
+          </tr>
+          <tr>
+            <td></td>
             <td>
               <label
                 ><input
                   type="checkbox"
                   name="pt1browsers"
-                  value="firefox"
+                  value="Chrome"
                 />Chrome</label
               >
             </td>
+          </tr>
+          <tr>
+            <td></td>
             <td>
               <label
                 ><input
                   type="checkbox"
                   name="pt1browsers"
-                  value="firefox"
+                  value="Safari"
                 />Safari</label
               >
             </td>
           </tr>
           <tr>
             <td>
-              <label for="movie-genre">Type of movie:</label>
+              <label for="movieGenre">Type of movie:</label>
             </td>
             <td>
-              <select id="movie-genre" name="genre">
+              <select id="movieGenre" name="genre">
+                <option value="option">Select...</option>
                 <option value="action">Action</option>
                 <option value="comedy">Comedy</option>
                 <option value="drama">Drama</option>
