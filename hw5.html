@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery UI library -->
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+
+    <script defer src="./hw5script.js"></script>
     <link rel="stylesheet" href="./style.css" />
     <meta name="description" content="Homework-5 is shown in this website." />
     <meta charset="UTF-8" />
@@ -27,7 +34,103 @@
         <a href="./hw7.html"> Homework-7</a>
         <a href="./hw8.html"> Homework-8</a>
       </div>
-      <h2>Coming Soon!</h2>
+      <h2>Part - 1</h2>
+      <p>In this part of the homework,</p>
+      <form onsubmit="return false">
+        <table>
+          <tr>
+            <td>
+              <label for="part1name">Full name:</label>
+            </td>
+            <td><input id="part1name" type="text" /></td>
+          </tr>
+          <tr>
+            <td><label>Age:</label></td>
+            <td>
+              <label
+                ><input type="radio" name="ageGroup" value="less" />Less than
+                21</label
+              >
+            </td>
+            <td>
+              <label
+                ><input type="radio" name="ageGroup" value="between" />Between
+                21 and 50</label
+              >
+            </td>
+            <td>
+              <label
+                ><input type="radio" name="ageGroup" value="more" />Older than
+                50</label
+              >
+            </td>
+          </tr>
+          <tr>
+            <td><label>Browser:</label></td>
+            <td>
+              <label
+                ><input
+                  type="checkbox"
+                  name="pt1browsers"
+                  value="firefox"
+                />Firefox</label
+              >
+            </td>
+            <td>
+              <label
+                ><input
+                  type="checkbox"
+                  name="pt1browsers"
+                  value="firefox"
+                />Edge</label
+              >
+            </td>
+            <td>
+              <label
+                ><input
+                  type="checkbox"
+                  name="pt1browsers"
+                  value="firefox"
+                />Chrome</label
+              >
+            </td>
+            <td>
+              <label
+                ><input
+                  type="checkbox"
+                  name="pt1browsers"
+                  value="firefox"
+                />Safari</label
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="movie-genre">Type of movie:</label>
+            </td>
+            <td>
+              <select id="movie-genre" name="genre">
+                <option value="action">Action</option>
+                <option value="comedy">Comedy</option>
+                <option value="drama">Drama</option>
+                <option value="documentary">Documentary</option>
+                <option value="science-fiction">Science Fiction</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center">
+              <input
+                type="submit"
+                value="Submit"
+                onclick="validateInputPart1()"
+              />
+              <button type="reset">Clear Form</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <p id="outputPt1"></p>
     </main>
     <footer id="footer">
       <p>

@@ -105,7 +105,7 @@ function displaySquare() {
   const size = parseInt(numberInput.value);
   if (isNaN(size) || size < 2 || size > 10) {
     result.innerText =
-      "Invalid number. Please enter a number between 2 and 10.";
+      "Sorry, please enter any number between 2 and 10 inclusively";
     return;
   }
   let square = "";
