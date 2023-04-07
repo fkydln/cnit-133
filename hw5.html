@@ -151,6 +151,23 @@
         </table>
       </form>
       <p id="outputPt1"></p>
+      <h2>Part-2</h2>
+      <h3>Pulldown Menu 1</h3>
+      <select onchange="openWebsite(this)">
+        <option value="">Select a website</option>
+        <option value="https://www.meta.com/">Meta</option>
+        <option value="https://www.facebook.com/">Facebook</option>
+        <option value="https://www.instagram.com/">Instagram</option>
+      </select>
+
+      <h3>Pulldown Menu 2</h3>
+      <select id="menu2">
+        <option value="">Select a website</option>
+        <option value="https://www.github.com">GitHub</option>
+        <option value="https://www.linkedin.com">LinkedIn</option>
+        <option value="https://www.stackoverflow.com">Stack Overflow</option>
+      </select>
+      <button onclick="openSelectedWebsite()">Open Website</button>
     </main>
     <footer id="footer">
       <p>

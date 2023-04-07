@@ -20,3 +20,18 @@ function validateInputPart1() {
     $("#outputPt1").html("Sorry, please fill the entire form completely.");
   }
 }
+// Part-2 Scripts are written below
+function openWebsite(menu) {
+  var url = menu.value;
+  if (url) {
+    window.open(url, "_blank");
+  }
+}
+
+function openSelectedWebsite() {
+  var menu = document.getElementById("menu2");
+  var url = menu.value;
+  if (url) {
+    window.open(url, "_blank");
+  }
+}
