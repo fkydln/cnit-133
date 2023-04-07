@@ -8,20 +8,31 @@
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
 
     <script defer src="./hw5script.js"></script>
-    <link rel="stylesheet" href="./style.css" />
-    <meta name="description" content="Homework-5 is shown in this website." />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- prettier-ignore -->
+
+    <link rel="stylesheet" href="./style.css" >
+    <!-- prettier-ignore -->
+
+    <meta name="description" content="Homework-5 is shown in this website." >
+    <!-- prettier-ignore -->
+
+    <meta charset="UTF-8" >
+    <!-- prettier-ignore -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>JavaScript, jQuery, AJAX Homework-5</title>
     <!-- I am Faz Kayadelen, passionate about web development! -->
   </head>
   <body>
     <header>
-      <img src="./logo.PNG" alt="Faz's world representative img" />
+      <!-- prettier-ignore -->
+
+      <img src="./logo.PNG" alt="Faz's world representative img" >
       <h1 id="home">CNIT 133 Homework 5 - Arrays</h1>
       <nav>
         <a href="./hw1.html">Home</a>
         <a href="#part1">Part-1</a>
+        <a href="#part2">Part-2</a>
+        <a href="#part3">Part-3</a>
         <a href="#footer">Bottom of the page</a>
       </nav>
     </header>
@@ -46,13 +57,17 @@
             <td>
               <label for="part1name">Full name:</label>
             </td>
-            <td><input id="part1name" type="text" /></td>
+            <td>
+              <!-- prettier-ignore -->
+              <input id="part1name" type="text" >
+            </td>
           </tr>
           <tr>
             <td><label>Age:</label></td>
             <td>
-              <label
-                ><input type="radio" name="ageGroup" value="less" />Less than
+              <!-- prettier-ignore --><label>
+                
+                <input type="radio" name="ageGroup" value="less">Less than
                 21</label
               >
             </td>
@@ -60,17 +75,21 @@
           <tr>
             <td></td>
             <td>
-              <label
-                ><input type="radio" name="ageGroup" value="between" />Between
-                21 and 50</label
+              <!-- prettier-ignore -->
+              <label>
+                
+                <input type="radio" name="ageGroup" value="between">Between 21
+                and 50</label
               >
             </td>
           </tr>
           <tr>
             <td></td>
             <td>
-              <label
-                ><input type="radio" name="ageGroup" value="more" />Older than
+              <!-- prettier-ignore -->
+              <label>
+                
+                <input type="radio" name="ageGroup" value="more">Older than
                 50</label
               >
             </td>
@@ -78,48 +97,56 @@
           <tr>
             <td><label>Browser:</label></td>
             <td>
-              <label
-                ><input
+              <!-- prettier-ignore -->
+              <label>
+               
+                <input
                   type="checkbox"
                   name="pt1browsers"
                   value="Firefox"
-                />Firefox</label
+               >Firefox</label
               >
             </td>
           </tr>
           <tr>
             <td></td>
             <td>
-              <label
-                ><input
+              <!-- prettier-ignore -->
+              <label>
+                
+                <input
                   type="checkbox"
                   name="pt1browsers"
                   value="Edge"
-                />Edge</label
+              >Edge</label
               >
             </td>
           </tr>
           <tr>
             <td></td>
             <td>
-              <label
-                ><input
+              <!-- prettier-ignore -->
+              <label>
+                
+                <input
                   type="checkbox"
                   name="pt1browsers"
                   value="Chrome"
-                />Chrome</label
+               >Chrome</label
               >
             </td>
           </tr>
           <tr>
             <td></td>
             <td>
-              <label
-                ><input
+              <!-- prettier-ignore -->
+              <label>
+            
+                <input
                   type="checkbox"
                   name="pt1browsers"
                   value="Safari"
-                />Safari</label
+             >Safari</label
               >
             </td>
           </tr>
@@ -140,18 +167,24 @@
           </tr>
           <tr>
             <td colspan="2" style="text-align: center">
+              <!-- prettier-ignore -->
               <input
                 type="submit"
                 value="Submit"
                 onclick="validateInputPart1()"
-              />
+              >
               <button type="reset">Clear Form</button>
             </td>
           </tr>
         </table>
       </form>
       <p id="outputPt1"></p>
-      <h2>Part-2</h2>
+      <h2 id="part2">Part-2</h2>
+      <p>
+        This part of the homework demonstrates two pulldown menu elements with a
+        slight difference. One goes with an onchange while the second one
+        requires the open website button to be pushed.
+      </p>
       <h3>Pulldown Menu 1</h3>
       <select onchange="openWebsite(this)">
         <option value="">Select a website</option>
@@ -168,6 +201,19 @@
         <option value="https://www.stackoverflow.com">Stack Overflow</option>
       </select>
       <button onclick="openSelectedWebsite()">Open Website</button>
+      <h2 id="part3">Part - 3</h2>
+      <p>
+        This part of the homework shows information about the state that user
+        inputs.
+      </p>
+      <form>
+        <label for="stateInput">Enter state name or abbreviation:</label>
+        <!-- prettier-ignore -->
+        <input type="text" id="stateInput" name="stateInput" >
+        <button type="button" onclick="getStateInfo()">Get State Info</button>
+        <button type="reset">Clear</button>
+        <div id="output"></div>
+      </form>
     </main>
     <footer id="footer">
       <p>
