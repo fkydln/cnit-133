@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="./hw6script.js"></script>
     <link rel="stylesheet" href="./style.css" />
     <meta name="description" content="Homework-6 is shown in this website." />
     <meta charset="UTF-8" />
@@ -14,6 +15,7 @@
       <h1 id="home">CNIT 133 Homework 6 - Objects</h1>
       <nav>
         <a href="./hw1.html">Home</a>
+        <a href="#part1">Part-1</a>
         <a href="#footer">Bottom of the page</a>
       </nav>
     </header>
@@ -27,7 +29,24 @@
         <a href="./hw7.html"> Homework-7</a>
         <a href="./hw8.html"> Homework-8</a>
       </div>
-      <h2>Coming Soon!</h2>
+      <h2 id="part1">Part-1</h2>
+      <p>
+        This part is a tool where you enter a number with 4 decimal places or
+        more. It calculates and shows the rounded number, square root, and more.
+        If the number is invalid, it will display an error message.
+      </p>
+      <form>
+        <label for="numberInput"
+          >Enter a number with at least 4 decimal positions:</label
+        >
+        <input type="number" step="0.0001" id="numberInput" required />
+        <br /><br />
+        <button type="button" onclick="calculate()">Calculate</button>
+        <button type="reset" onclick="clearForm()">Clear</button>
+      </form>
+      <br />
+      <div id="output"></div>
+      <br /><br />
     </main>
     <footer id="footer">
       <p>
