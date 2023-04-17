@@ -78,7 +78,7 @@
         <textarea id="content" name="content" rows="5" cols="50"></textarea
         ><br >
         <label for="char">Single Character:</label><br >
-        <input type="text" id="char" name="char" maxlength="1" /><br >
+        <!-- prettier-ignore --><input type="text" id="char" name="char" maxlength="1" ><br >
         <input type="button" value="Search" onclick="searchChar()" >
       </form>
       <div id="result"></div>
@@ -91,7 +91,7 @@
       <!-- prettier-ignore -->
       <form>
         <label for="phone">Enter phone number:</label><br >
-        <input type="text" id="phone" name="phone" /><br >
+        <!-- prettier-ignore --><input type="text" id="phone" name="phone" ><br >
         <label for="area-code">Area code:</label><br >
         <input
           type="text"
@@ -100,12 +100,13 @@
           readonly><!-- prettier-ignore --><br >
         <label for="first-three-digits">First three digits:</label
         ><!-- prettier-ignore --><br >
+        <!-- prettier-ignore -->
         <input
           type="text"
           id="first-three-digits"
           name="first-three-digits"
           readonly
-        /><!-- prettier-ignore --><br >
+        ><!-- prettier-ignore --><br >
         <label for="last-four-digits">Last four digits:</label
         ><!-- prettier-ignore --><br >
         <!-- prettier-ignore --><input
