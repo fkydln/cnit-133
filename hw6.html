@@ -16,6 +16,7 @@
       <nav>
         <a href="./hw1.html">Home</a>
         <a href="#part1">Part-1</a>
+        <a href="#part2">Part-2</a>
         <a href="#footer">Bottom of the page</a>
       </nav>
     </header>
@@ -47,6 +48,17 @@
       <br />
       <div id="output"></div>
       <br /><br />
+      <h2 id="part2">Part-2</h2>
+      <p>This part is a ---</p>
+      <form>
+        <label for="content">Long Content:</label><br />
+        <textarea id="content" name="content" rows="5" cols="50"></textarea
+        ><br />
+        <label for="char">Single Character:</label><br />
+        <input type="text" id="char" name="char" maxlength="1" /><br />
+        <input type="button" value="Search" onclick="searchChar()" />
+      </form>
+      <div id="result"></div>
     </main>
     <footer id="footer">
       <p>

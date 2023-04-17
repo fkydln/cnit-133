@@ -29,3 +29,62 @@ function clearForm() {
   document.getElementById("numberInput").value = "";
   document.getElementById("output").innerHTML = "";
 }
+
+// Part-2 Scripts:
+
+function searchChar() {
+  var content = document.getElementById("content").value;
+  var char = document.getElementById("char").value.toUpperCase();
+  var count = 0;
+
+  var myText = "<!DOCTYPE html>\n";
+  myText += "<html lang='en'>\n";
+  myText += "<head>\n";
+  myText += "<title>Popup Window</title>\n";
+  myText += "</head>\n";
+  myText += "<body>\n";
+  myText += "<div style='margin:0 auto;'>\n";
+  myText +=
+    "<p><strong>Search character " +
+    char +
+    " not found in the content you typed</strong></p>\n";
+  myText +=
+    "<input type='button' value='Close Window' onclick='window.close()'>\n";
+  myText += "</div>\n";
+  myText += "</body>\n";
+  myText += "</html>";
+
+  for (var i = 0; i < content.length; i++) {
+    if (content.charAt(i).toUpperCase() === char) {
+      count++;
+    }
+  }
+  if (count > 0) {
+    document.getElementById("result").innerHTML =
+      "The character " + char + " appears " + count + " times in the content.";
+  } else {
+    document.getElementById("result").innerHTML = "";
+
+    // open window on the upperleft of the screen
+
+    var newWindow = window.open(
+      "",
+      "new_window",
+      "top=1,left=1,width=300,height=100"
+    );
+
+    newWindow.opener = null; // this is for security!!!
+
+    // have browser focus on window
+
+    newWindow.focus();
+
+    // pump html into to this new opened window
+
+    newWindow.document.write(myText);
+
+    // tell browser that newWindow document is finished loading
+
+    newWindow.document.close();
+  }
+}
