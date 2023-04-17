@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script src="./hw6script.js"></script>
     <link rel="stylesheet" href="./style.css" />
     <meta name="description" content="Homework-6 is shown in this website." />
@@ -17,6 +19,7 @@
         <a href="./hw1.html">Home</a>
         <a href="#part1">Part-1</a>
         <a href="#part2">Part-2</a>
+        <a href="#part3">Part-3</a>
         <a href="#footer">Bottom of the page</a>
       </nav>
     </header>
@@ -63,6 +66,35 @@
         <input type="button" value="Search" onclick="searchChar()" />
       </form>
       <div id="result"></div>
+      <h2 id="part3">Part-3 (with extra credit)</h2>
+      <p>
+        This part is a web tool where the user enters the complete phone number
+        then the program returns area code, first three digits and the last
+        three digits.
+      </p>
+      <form>
+        <label for="phone">Enter phone number:</label><br />
+        <input type="text" id="phone" name="phone" /><br />
+        <label for="area-code">Area code:</label><br />
+        <input type="text" id="area-code" name="area-code" readonly /><br />
+        <label for="first-three-digits">First three digits:</label><br />
+        <input
+          type="text"
+          id="first-three-digits"
+          name="first-three-digits"
+          readonly
+        /><br />
+        <label for="last-four-digits">Last four digits:</label><br />
+        <input
+          type="text"
+          id="last-four-digits"
+          name="last-four-digits"
+          readonly
+        /><br />
+        <button type="button" id="format-btn">Format Phone Number</button>
+        <button type="button" id="clear-btn">Clear Form</button>
+      </form>
+      <div id="error-msg"></div>
     </main>
     <footer id="footer">
       <p>

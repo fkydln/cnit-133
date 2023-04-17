@@ -88,3 +88,35 @@ function searchChar() {
     newWindow.document.close();
   }
 }
+// Part-3 Scripts below:
+
+$(document).ready(function () {
+  $("#phone").mask("(999) 999-9999");
+  $("#format-btn").click(function () {
+    const phoneNum = $("#phone").val();
+    const regex = /^\((\d{3})\) (\d{3})\-(\d{4})$/;
+    if (regex.test(phoneNum)) {
+      const [_, areaCode, firstThreeDigits, lastFourDigits] =
+        phoneNum.match(regex);
+      $("#area-code").val(areaCode);
+      $("#first-three-digits").val(firstThreeDigits);
+      $("#last-four-digits").val(lastFourDigits);
+      $("#error-msg").text("");
+    } else {
+      $("#area-code").val("");
+      $("#first-three-digits").val("");
+      $("#last-four-digits").val("");
+      $("#error-msg").text(
+        "Please enter the phone number as the following format (987) 654-3210."
+      );
+    }
+  });
+
+  $("#clear-btn").click(function () {
+    $("#phone").val("");
+    $("#area-code").val("");
+    $("#first-three-digits").val("");
+    $("#last-four-digits").val("");
+    $("#error-msg").text("");
+  });
+});
