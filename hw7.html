@@ -32,13 +32,57 @@
       </div>
 
       <div class="accordion">
-        <h2 class="accordion-header">Part 1</h2>
+        <h2 class="accordion-header"><a href="#pt1desc">Part 1</a></h2>
         <div class="accordion-content">
-          <p>Description for Part 1</p>
+          <p id="pt1desc">
+            In this part of the homework, the tool helps actively changing the
+            document according to the user's desired styles.
+          </p>
+
+          <div id="content">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Reiciendis deserunt iste est. Sapiente consequuntur aperiam
+              suscipit in iure ea ipsam delectus distinctio facere dolorum
+              voluptas expedita inventore, voluptate nesciunt mollitia.
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Dignissimos voluptatibus deleniti, ipsam sunt iusto a? Voluptates
+              nesciunt, temporibus id, illum consequatur repellendus quisquam
+              quo in et, asperiores minima? Nam, ea!
+            </p>
+
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. At vero
+              ratione illum veniam quo similique quam, officia eveniet
+              doloremque voluptas enim qui illo ullam. Quis, sequi. Officia
+              perspiciatis consectetur ut.
+            </p>
+          </div>
+          <form id="style-form">
+            <label>Background color:</label>
+            <input type="radio" name="bg-color" value="white" checked /> White
+            <input type="radio" name="bg-color" value="lightgray" /> Light Gray
+            <br />
+            <label>Text decoration:</label>
+            <input type="checkbox" name="underline" /> Underline
+            <input type="checkbox" name="bold" /> Bold
+            <input type="checkbox" name="italic" /> Italic
+            <br />
+            <label>Font size:</label>
+            <select name="font-size">
+              <option value="1em">1em</option>
+              <option value="1.2em">1.2em</option>
+              <option value="1.5em">1.5em</option>
+            </select>
+            <br />
+          </form>
         </div>
-        <h2 class="accordion-header">Part 2</h2>
+        <h2 class="accordion-header"><a href="#pt2desc">Part 2</a></h2>
         <div class="accordion-content">
-          <p>Description for Part 2</p>
+          <p id="pt2desc">Description for Part 2</p>
         </div>
       </div>
     </main>
