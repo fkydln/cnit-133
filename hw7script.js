@@ -30,3 +30,25 @@ $(document).ready(function () {
     });
   }
 });
+// Part-2 Scripts:
+const mainNav = document.getElementById("main-nav");
+const subNavs = mainNav.querySelectorAll("ul > li > ul");
+
+for (const subNav of subNavs) {
+  // Add class to sub-nav so we can style it with CSS
+  subNav.classList.add("sub-nav");
+
+  // Hide the sub-nav initially
+  subNav.style.display = "none";
+
+  // Show the sub-nav when the parent li is hovered
+  const parentLi = subNav.parentNode;
+  parentLi.addEventListener("mouseover", function () {
+    subNav.style.display = "block";
+  });
+
+  // Hide the sub-nav when the parent li is no longer hovered
+  parentLi.addEventListener("mouseout", function () {
+    subNav.style.display = "none";
+  });
+}

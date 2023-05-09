@@ -1,3 +1,7 @@
+header {
+	padding: 10px;
+	text-align: center;
+}
 a:visited {
   text-decoration: none;
   color: black;
@@ -17,6 +21,8 @@ nav {
 }
 body {
   background-color: rgb(253, 251, 244);
+  font-family: Arial, sans-serif;
+
   max-width: 95%;
   margin: auto;
 }
@@ -49,6 +55,10 @@ input {
 .solidBorders{
   border: 1px solid;
 
+}
+
+.accordion{
+  margin-bottom: 15%;
 }
 .modal {
   display: none; /* hide the modal by default */
@@ -87,4 +97,59 @@ th, td {
 }
 table {
   border-collapse: collapse;
+}
+nav {
+  background-color: #f2f2f2;
+  padding: 10px;
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+  position: relative;
+}
+
+nav li:hover > ul {
+  display: block;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: block;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 150px;
+  background-color: #ddd;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul ul li {
+  display: block;
+  margin: 0;
+}
+
+nav ul ul a {
+  padding: 5px 10px;
+  display: block;
+}
+
+nav ul ul ul {
+  top: 0;
+  left: 100%;
+  margin-left: 10px;
 }
