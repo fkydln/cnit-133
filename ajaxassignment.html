@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <title>Homework 8 - AJAX Application</title>
   </head>
   <style>
@@ -47,5 +49,110 @@
         document.getElementById("demo").innerHTML = table;
       }
     </script>
+    <script>
+      $(document).ready(function () {
+        $("#country-select").change(function () {
+          var countryName = $(this).val();
+          var url = "https://restcountries.com/v2/name/" + countryName;
+          $.ajax({
+            url: url,
+            type: "GET",
+            success: function (data) {
+              var country = data[0];
+              var countryInfo =
+                "Country: " +
+                country.name +
+                "<br>" +
+                "Capital: " +
+                country.capital +
+                "<br>" +
+                "Population: " +
+                country.population +
+                "<br>" +
+                "Currency: " +
+                country.currencies[0].name +
+                "<br>" +
+                "Flag: <img src='" +
+                country.flag +
+                "' alt='Flag of " +
+                country.name +
+                "'>";
+              $("#country-info").html(countryInfo);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+              alert("Error: " + errorThrown);
+            },
+          });
+        });
+      });
+    </script>
+    <h2>Explanation of AJAX</h2>
+    <p>
+      In the code above, we have a button that triggers an AJAX request to get
+      the CD collection from the XML file "cd_catalog.xml". When the button is
+      clicked, the "loadDoc" function is called which creates an XMLHttpRequest
+      object and sends a GET request to the specified URL. The response from the
+      server is handled by the "myFunction" function which extracts the data
+      from the XML document and populates the HTML table with it.
+    </p>
+    <h2>Random Fox API</h2>
+    <p>
+      The Random Fox API is a RESTful API that allows developers to retrieve
+      random images of foxes in JSON format. This API is a great resource for
+      developers looking to add some fun and randomness to their applications,
+      as well as those looking to incorporate images of foxes into their
+      projects.
+    </p>
+    <p>
+      To access and use the API, you do not need any type of key or
+      authentication. The API is completely open and free to use for everyone.
+    </p>
+    <p>
+      The response file you get is in JSON format, which is a lightweight data
+      interchange format that is easy for machines to parse and generate, and is
+      human-readable and easy to debug.
+    </p>
+    <p>
+      There is no fee to use the Random Fox API. It is completely free and open
+      for everyone to use.
+    </p>
+    <p>
+      To get started with the API, you can visit the Random Fox API
+      documentation at
+      <a href="https://randomfox.ca/">https://randomfox.ca/</a>. The
+      documentation provides detailed information on how to use the API,
+      including the API endpoint, query parameters, and example requests and
+      responses. It also includes code snippets in various programming languages
+      to help developers get started quickly.
+    </p>
+    <h2>Extra Credit:</h2>
+    <h2>REST Countries API</h2>
+    <p>
+      REST Countries is a free API that provides a wealth of information about
+      countries around the world. With REST Countries, you can easily retrieve
+      data about a country's name, capital, population, borders, and much more.
+      It's a great API for building applications that need to display
+      country-specific information.
+    </p>
+    <p>Select a country:</p>
+    <select id="country-select">
+      <option value="">Select a country</option>
+      <option value="United States of America">United States</option>
+      <option value="Turkey">Turkey</option>
+      <option value="United Kingdom">United Kingdom</option>
+      <option value="Singapore">Singapore</option>
+      <option value="Switzerland">Switzerland</option>
+      <option value="Israel">Israel</option>
+      <option value="Norway">Norway</option>
+      <option value="Luxembourg">Luxembourg</option>
+      <option value="Ukraine">Ukraine</option>
+
+      <option value="Brunei">Brunei</option>
+      <option value="Ireland">Ireland</option>
+      <option value="United Arab Emirates">United Arab Emirates</option>
+      <option value="Kuwait">Kuwait</option>
+      <option value="Qatar">Qatar</option>
+    </select>
+    <div id="country-info"></div>
   </body>
 </html>
